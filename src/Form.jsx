@@ -20,13 +20,13 @@ export const Form = ({ particulardata, onreload }) => {
       const submitingdata = async (e) => {
         e.preventDefault()
         if (particulardata) {
-          await axios.put(`http://localhost:1000/put/course/${particulardata._id}`, { title, description, duration })
+          await axios.put(`https://merncrud-backend.onrender.com/put/course/${particulardata._id}`, { title, description, duration })
           setTitle('')
           setDescription('')
           setDuration('')
           alert('Course Updated Successfully')
         } else {
-          await axios.post('https://merncrud-backend.onrender.com', { title, description, duration })
+          await axios.post('https://merncrud-backend.onrender.com/post/course', { title, description, duration })
           setTitle('')
           setDescription('')
           setDuration('')

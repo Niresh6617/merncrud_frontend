@@ -7,7 +7,7 @@ export const View = () => {
     const [particulardata, setParticulardata] = useState(null)
 
     const fetchdata = async () => {
-        const data = await axios.get('http://localhost:1000/get/courses')
+        const data = await axios.get('https://merncrud-backend.onrender.com/get/courses')
         setAlldata(data.data)
     }
     useEffect(() => {
@@ -15,7 +15,7 @@ export const View = () => {
     }, [])
     
     const deletedata = async (id) => {
-        await axios.delete(`http://localhost:1000/delete/course/${id}`)
+        await axios.delete(`https://merncrud-backend.onrender.com/delete/course/${id}`)
         fetchdata()
     }
 
