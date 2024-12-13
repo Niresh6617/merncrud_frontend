@@ -26,7 +26,7 @@ export const Form = ({ particulardata, onreload }) => {
           setDuration('')
           alert('Course Updated Successfully')
         } else {
-          await axios.post('http://localhost:1000/post/course', { title, description, duration })
+          await axios.post('https://merncrud-backend.onrender.com', { title, description, duration })
           setTitle('')
           setDescription('')
           setDuration('')
